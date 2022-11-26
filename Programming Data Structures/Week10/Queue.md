@@ -20,6 +20,7 @@ class Queue:
     self.queue.append(value) # Be sure to use .append() and not .insert or you will start making a Stack (a different data structure)
 
   def dequeue(self):
+    #In a Priority queue you will do logic to make sure the high priorities are returned first.
     value = self.queue[0] # Get the value of the first item
     del self.queue[0] # Get rid of first item
     return value # return that value (Remember this is a FIFO type)
@@ -30,19 +31,17 @@ class Queue:
   def __len__(self):
     return len(self.queue)
 
-  def __str__(self):
-    result = "["
-    for item in self.queue:
-      result += str(item)
-      result += ", "
-    result += "]"
-    return result
+# Node is necessary to create the actual items
+class Node:
+      def __init__(self, value, priority):
+        self.value = value
+        self.priority = priority
 ```
 
 With this basic queue implementation you can write all sorts of different types of queues such as a **Turn Taking**, a **Priority**, or just a regular queue. **Priority queue** has a O(1) looking up and removing the first item and a O(n) for inserting an item in the queue.
 
 ## Queue Assignment:
-Your job is to prioritize error messages for the upgrades to the packing machine for the pet food factory you work for. You will have CRITICLE (3), IMPORTANT (2), and INFORMATION(1). You need to make the errors that have the highest priority to display first then those with lower priorities. If there are multiple items with the same priority the first one that is enqueued will be dequeued first.
+Your job is to prioritize error messages for the upgrades to the packing machine for the pet food factory you work for. You will have CRITCAL (3), IMPORTANT (2), and INFORMATION(1). You need to make the errors that have the highest priority to display first then those with lower priorities. If there are multiple items with the same priority the first one that is enqueued will be dequeued first. You will have a "Sensor 1 Blocked at CRITCAL", a "Front gate open IMPORTANT", "packing complete INFORMATION", and at least 1 other error message the either CRITCAL or IMPORTANT.
 
 ###SOLUTION TO Assignment:
 [Solution](SolutionQueue.md)
