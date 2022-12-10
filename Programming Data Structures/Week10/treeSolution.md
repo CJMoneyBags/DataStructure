@@ -140,4 +140,6 @@ print("new test")
 tree.delete_value(5)
 tree.delete_value(7)
 for x in tree:
-    print(x)  # 1, 3, 4, 5, 6, 7, 10
+    print(x)  # 1, 3, 4, 6, 10
+
+[back](Tree.md)

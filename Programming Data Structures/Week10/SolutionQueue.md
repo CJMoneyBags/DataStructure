@@ -44,3 +44,4 @@ Error.enqueue("Critical Error", CRITCAL)
 while len(Error) > 0:
    print(Error.dequeue())
 ```
+[back](Queue.md)
